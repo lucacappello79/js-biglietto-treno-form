@@ -1,5 +1,7 @@
 let inputKm = document.getElementById("distanceKm");
 let inputAge = document.getElementById("userAge");
+let inputName = document.getElementById("userName");
+let inputLastName = document.getElementById("userLastName");
 
 let recapButton = document.getElementById("recap");
 let clearButton = document.getElementById("clear");
@@ -37,6 +39,9 @@ clearButton.addEventListener("click", function(){
 
     inputKm.value = "";
     inputAge.value = "";
+    inputName.value = "";
+    inputLastName.value = "";
+
 
 })
 

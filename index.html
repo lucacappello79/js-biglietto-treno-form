@@ -20,28 +20,58 @@
 
         <div class="user-info mx-auto p-3">
 
-            <div style="margin: 30px;">
+            <div class="row row-cols-2">
 
-                <!-- <label for="userAge" class="mx-4">Fascia d'età</label> -->
-                <input type="number" id="userAge" placeholder="Fascia d' età" class="py-2 text-center">
+                <div class="col user-left">
 
-            </div>  
+                    <div style="margin: 30px;">
 
-            <div style="margin: 30px;">
+                        <!-- <label for="userAge" class="mx-4">Fascia d'età</label> -->
+                        <input type="number" id="userAge" placeholder="Fascia d' età" class="py-2 text-center">
+    
+                    </div>  
+    
+                    <div style="margin: 30px;">
+    
+                        <!-- <label for="distanceKm" class="mx-1">Km da percorrere</label> -->
+                        <input type="number" id="distanceKm" placeholder="Km da percorrere" class="py-2 text-center">
+    
+                    </div>
 
-                <!-- <label for="distanceKm" class="mx-1">Km da percorrere</label> -->
-                <input type="number" id="distanceKm" placeholder="Km da percorrere" class="py-2 text-center">
+                </div>
 
+                <div class="col user-right">
+
+                    <div style="margin: 30px;">
+
+                        <!-- <label for="userAge" class="mx-4">Fascia d'età</label> -->
+                        <input type="text" id="userName" placeholder="Nome" class="py-2 text-center">
+    
+                    </div>  
+    
+                    <div style="margin: 30px;">
+    
+                        <!-- <label for="distanceKm" class="mx-1">Km da percorrere</label> -->
+                        <input type="text" id="userLastName" placeholder="Cognome" class="py-2 text-center">
+    
+                    </div>
+
+                </div>
+
+                <div class="col user-bot mx-auto">
+
+                    <div style="margin: 30px;">
+            
+                        <button id="recap" class="p-2 m-2">Genera</button>
+                        <button id="clear" class="p-2 m-2">Annulla</button>
+    
+                    </div>
+
+                </div>  
+            
             </div>
 
-            <div style="margin: 30px;">
-        
-                <button id="recap" class="p-2 m-2">Genera</button>
-                <button id="clear" class="p-2 m-2">Annulla</button>
-
-            </div>
-
-        </div>    
+        </div>        
 
     </div>
 
