@@ -1,0 +1,9 @@
+.wrapper{
+    background-color:cornflowerblue
+}
+
+.user-info{
+    background-color:burlywood;
+    max-width: 800px;
+    width: 100%;
+}
