@@ -13,6 +13,26 @@ recapButton.addEventListener("click", function() {
     let totalPrice = (distanceKm * (0.21));
     let minorDiscount = (totalPrice / 100 * 20);
     let seniorDiscount = (totalPrice / 100 * 40);
+
+    //-----biglietto
+
+    let ticketKm = document.getElementById("ticketKm")
+    ticketKm.value = ("Distanza totale: " + distanceKm)
+    ticketKm.readonly = true; //not working
+
+    let ticketPrice = document.getElementById("ticketPrice")
+    // vedi sezione IF
+
+    let ticketName = document.getElementById("ticketName")
+    ticketName.value = ("Nome: " + inputName.value)
+    ticketName.readonly = true;
+
+    let ticketLastName = document.getElementById("ticketLastName")
+    ticketLastName.value = ("Cognome: " + inputLastName.value)
+    ticketLastName.readonly = true;
+
+    //------- fine biglietto
+
     
     if (isNaN(inputKm.value) || isNaN(inputAge.value)) {
     
@@ -28,32 +48,26 @@ recapButton.addEventListener("click", function() {
         if (inputAge.value < 18) {
 
             console.log(totalPrice - minorDiscount);
+            ticketPrice.value = ("Importo totale: " + (totalPrice - minorDiscount).toFixed(2));
+            ticketPrice.readonly = true;
     
         } else if (inputAge.value > 65) {
 
             console.log(totalPrice - seniorDiscount);
+            ticketPrice.value = ("Importo totale: " + (totalPrice - seniorDiscount).toFixed(2));
+            ticketPrice.readonly = true;
 
         } else {
 
             console.log(totalPrice.toFixed(2))
+            ticketPrice.value = ("Importo totale: " + totalPrice);
+            ticketPrice.readonly = true;
         }
 
         console.log("distanza totale: " + distanceKm);
         console.log("prezzo intero: " + totalPrice);
         console.log("sconto minorenni: " + minorDiscount);
         console.log("sconto senior: " + seniorDiscount);
-
-        let ticketKm = document.getElementById("ticketKm")
-        ticketKm.value = ("Distanza totale: " + distanceKm)
-
-        let ticketPrice = document.getElementById("ticketPrice")
-        ticketPrice.value = ("Importo totale: " + totalPrice);
-
-        let ticketName = document.getElementById("ticketName")
-        ticketName.value = ("Nome: " + inputName.value)
-
-        let ticketLastName = document.getElementById("ticketLastName")
-        ticketLastName.value = ("Cognome: " + inputLastName.value)
 
 })
 
@@ -63,6 +77,10 @@ clearButton.addEventListener("click", function(){
     inputAge.value = "";
     inputName.value = "";
     inputLastName.value = "";
+    ticketKm.value = "";
+    ticketPrice.value = "";
+    ticketName.value = "";
+    ticketLastName.value = "";
 
 })
 
