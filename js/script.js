@@ -14,24 +14,46 @@ recapButton.addEventListener("click", function() {
     let minorDiscount = (totalPrice / 100 * 20);
     let seniorDiscount = (totalPrice / 100 * 40);
     
-
-    if (inputAge.value < 18) {
-
-        console.log(totalPrice - minorDiscount);
+    if (isNaN(inputKm.value) || isNaN(inputAge.value)) {
     
-    } else if (inputAge.value > 65) {
+    //    Per eseguire subito l' If col calcolo dei valori e solo dopo eventualmente mandare l'alert allora avrei dovuto scriverlo in uno di questi due minorDiscount,
+    //    facendo la negazione e invertendo if ed else qui sotto
+    //    if (!isNaN(inputKm.value) || !isNaN(inputAge.value)) {
+    //    if (!(isNaN(inputKm.value) || isNaN(inputAge.value))) {
 
-        console.log(totalPrice - seniorDiscount);
+        alert("Inserire un numero");
 
-    } else {
+    } else
 
-        console.log(totalPrice.toFixed(2))
-    }
+        if (inputAge.value < 18) {
 
-    console.log("distanza totale: " + distanceKm);
-    console.log("prezzo intero: " + totalPrice);
-    console.log("sconto minorenni: " + minorDiscount);
-    console.log("sconto senior: " + seniorDiscount);
+            console.log(totalPrice - minorDiscount);
+    
+        } else if (inputAge.value > 65) {
+
+            console.log(totalPrice - seniorDiscount);
+
+        } else {
+
+            console.log(totalPrice.toFixed(2))
+        }
+
+        console.log("distanza totale: " + distanceKm);
+        console.log("prezzo intero: " + totalPrice);
+        console.log("sconto minorenni: " + minorDiscount);
+        console.log("sconto senior: " + seniorDiscount);
+
+        let ticketKm = document.getElementById("ticketKm")
+        ticketKm.value = ("Distanza totale: " + distanceKm)
+
+        let ticketPrice = document.getElementById("ticketPrice")
+        ticketPrice.value = ("Importo totale: " + totalPrice);
+
+        let ticketName = document.getElementById("ticketName")
+        ticketName.value = ("Nome: " + inputName.value)
+
+        let ticketLastName = document.getElementById("ticketLastName")
+        ticketLastName.value = ("Cognome: " + inputLastName.value)
 
 })
 
@@ -42,8 +64,5 @@ clearButton.addEventListener("click", function(){
     inputName.value = "";
     inputLastName.value = "";
 
-
 })
-
-
 
