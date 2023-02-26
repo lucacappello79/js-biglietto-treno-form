@@ -18,7 +18,7 @@ recapButton.addEventListener("click", function() {
 
     let ticketKm = document.getElementById("ticketKm")
     ticketKm.value = ("Distanza totale: " + distanceKm)
-    ticketKm.readOnly = true; //not working
+    ticketKm.readOnly = true;
 
     let ticketPrice = document.getElementById("ticketPrice")
     // vedi sezione IF
@@ -36,7 +36,7 @@ recapButton.addEventListener("click", function() {
     
     if (isNaN(inputKm.value) || isNaN(inputAge.value)) {
     
-    //    Per eseguire subito l' If col calcolo dei valori e solo dopo eventualmente mandare l'alert allora avrei dovuto scriverlo in uno di questi due minorDiscount,
+    //    Per eseguire subito If col calcolo dei valori e solo dopo eventualmente mandare l'alert allora avrei dovuto scriverlo in uno di questi due minorDiscount,
     //    facendo la negazione e invertendo if ed else qui sotto
     //    if (!isNaN(inputKm.value) || !isNaN(inputAge.value)) {
     //    if (!(isNaN(inputKm.value) || isNaN(inputAge.value))) {
