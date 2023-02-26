@@ -18,18 +18,18 @@ recapButton.addEventListener("click", function() {
 
     let ticketKm = document.getElementById("ticketKm")
     ticketKm.value = ("Distanza totale: " + distanceKm)
-    ticketKm.readonly = true; //not working
+    ticketKm.readOnly = true; //not working
 
     let ticketPrice = document.getElementById("ticketPrice")
     // vedi sezione IF
 
     let ticketName = document.getElementById("ticketName")
     ticketName.value = ("Nome: " + inputName.value)
-    ticketName.readonly = true;
+    ticketName.readOnly = true;
 
     let ticketLastName = document.getElementById("ticketLastName")
     ticketLastName.value = ("Cognome: " + inputLastName.value)
-    ticketLastName.readonly = true;
+    ticketLastName.readOnly = true;
 
     //------- fine biglietto
 
@@ -49,19 +49,19 @@ recapButton.addEventListener("click", function() {
 
             console.log(totalPrice - minorDiscount);
             ticketPrice.value = ("Importo totale: " + (totalPrice - minorDiscount).toFixed(2));
-            ticketPrice.readonly = true;
+            ticketPrice.readOnly = true;
     
         } else if (inputAge.value > 65) {
 
             console.log(totalPrice - seniorDiscount);
             ticketPrice.value = ("Importo totale: " + (totalPrice - seniorDiscount).toFixed(2));
-            ticketPrice.readonly = true;
+            ticketPrice.readOnly = true;
 
         } else {
 
             console.log(totalPrice.toFixed(2))
             ticketPrice.value = ("Importo totale: " + totalPrice);
-            ticketPrice.readonly = true;
+            ticketPrice.readOnly = true;
         }
 
         console.log("distanza totale: " + distanceKm);
